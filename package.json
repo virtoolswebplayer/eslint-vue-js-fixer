@@ -1,6 +1,6 @@
 {
   "name": "eslint-vue-js-fixer",
-  "version": "1.0.0 bete",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/eslint-vue-js-fixer.js",
   "scripts": {
