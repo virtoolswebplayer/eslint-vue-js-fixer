@@ -2,9 +2,13 @@
   "name": "eslint-vue-js-fixer",
   "version": "1.0.0",
   "description": "",
-  "main": "eslint-vue-js-fixer.js",
+  "main": "lib/eslint-vue-js-fixer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint --ext .js,.vue test",
+    "fix": "vuefix -s test -e .vue .vuex"
+  },
+  "bin": {
+    "vuefix": "./bin/vuefix.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,16 @@
   },
   "homepage": "https://github.com/virtoolswebplayer/eslint-vue-js-fixer#readme",
   "dependencies": {
+    "debug": "^2.6.0",
     "eslint": "^3.15.0",
-    "recursive-readdir": "^2.1.0"
+    "parse5": "^3.0.1",
+    "recursive-readdir": "^2.1.0",
+    "yargs": "^6.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-import": "latest"
   }
 }
