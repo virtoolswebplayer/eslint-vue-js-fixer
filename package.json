@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/virtoolswebplayer/eslint-vue-js-fixer.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["eslint", "vue", "fix"],
+  "author": "gaoletian@finupgroup.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/virtoolswebplayer/eslint-vue-js-fixer/issues"
