@@ -14,14 +14,19 @@ yarn add git+https://github.com/virtoolswebplayer/eslint-vue-js-fixer.git
 Usage: vuefix [options]
 
 Options:
-  -s, --src     源目录                      [string] [required] [default: "src"]
-  -e, --exlude  排除选项                                                [string]
+  -d, --dir     源目录                      [string] [required] [default: "src"]
+  -e, --exlude  排除                                     [array] [default: [""]]
+  -b, --babel   <script lang="babel" type="text/babel">         [default: false]
+  -s, --style   <style lang="less" rel="stylesheet/less">
+                                                       [string] [default: false]
   -h, --help    Show help                                              [boolean]
 
 Examples:
-  vuefix -s './src'            修复src目录下的所有 .vue 和 .js文件
-  vuefix -s './src' -e '*.js'  排除js文件
-  vuefix -s './src' -e '*.js'  排除js文件
+  vuefix -d src                    修复src目录下的所有 .vue 和 .js文件
+  vuefix -d src -e a.js b.js c.js  修复所有除了 a.js b.js c.js
+  vuefix -d src -s less            修复所有, style lang=less
+  vuefix -d src -s sass            修复所有, style lang=sass
+  vuefix -d src -b                 修复所有, script lang=babel
 
 ```
 
@@ -40,7 +45,7 @@ yarn add eslint-plugin-vue eslint-config-elemefe -D
 ...
 "scripts": {
     ...
-    "lint:fix": "vuefix -s src -e '.js'"
+    "lint:fix": "vuefix -s src"
   },
 ...
 ```

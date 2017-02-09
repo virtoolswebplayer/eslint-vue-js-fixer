@@ -37,7 +37,6 @@ const argv = require('yargs')
   .example('vuefix -d src -b', '修复所有, script lang=babel')
   .help('h')
   .alias('h', 'help')
-  .epilog('copyright 2016 gaoletian')
   .argv;
 
 vuefix(argv.d, argv.e, argv.b, argv.s)
