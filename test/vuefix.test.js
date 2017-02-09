@@ -30,7 +30,7 @@ function eslintfixer(input) {
   return input;
 }
 
-function vuefix(srcDir, exludeOption) {
+function vuefix(srcDir, exludeOption, _babel, _style) {
   recursive(srcDir, exludeOption, (err, files) => {
     const vuefiles = files.filter(f => f.match(/\.(vue|js)$/gi));
     vuefiles.forEach((filePath) => {
@@ -46,14 +46,18 @@ function vuefix(srcDir, exludeOption) {
           if (node.nodeName === 'script') {
             const scriptString = parser.serialize(node);
             node.childNodes[0].value = eslintfixer(scriptString);
+            if (_babel === 'babel') {
+              node.attrs = [
+                { name: 'lang', value: 'babel', },
+                { name: 'type', value: 'text/babel', }
+              ];
+            }
+          } else if (node.nodeName === 'style' && _style) {
+            const rel = `stylesheet/${_style}`;
+            const lang = _style;
             node.attrs = [
-              { name: 'lang', value: 'babel', },
-              { name: 'type', value: 'text/babel', }
-            ];
-          } else if (node.nodeName === 'style') {
-            node.attrs = [
-              { name: 'lang', value: 'less', },
-              { name: 'rel', value: 'stylesheet/less', }
+              { name: 'lang', value: lang, },
+              { name: 'rel', value: rel, }
             ];
           }
         }
