@@ -5,7 +5,7 @@
   "main": "lib/eslint-vue-js-fixer.js",
   "scripts": {
     "test": "eslint --ext .js,.vue test",
-    "fix": "vuefix -s test -e .vue .vuex"
+    "fix": "node bin/vuefix.js -d test -e a.js -s less -b"
   },
   "bin": {
     "vuefix": "./bin/vuefix.js"
@@ -25,7 +25,7 @@
     "debug": "^2.6.0",
     "eslint": "^3.15.0",
     "parse5": "^3.0.1",
-    "recursive-readdir": "^2.1.0",
+    "recursive-readdir": "2.1.0",
     "yargs": "^6.6.0"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 <template>
     <div></div>
 </template>
-<style lang="less" rel="stylesheet/less">
+<style lang="less" rel="stylesheet/less" scoped="">
     @import "../utils/_vars.less";
     @import "../utils/_mixins.less";
 
