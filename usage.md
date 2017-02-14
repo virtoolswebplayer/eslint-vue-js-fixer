@@ -1,7 +1,6 @@
 # 安装
 
 ```
-
 # 通过cnpm安装
 cnpm install eslint-vue-js-fixer
 
