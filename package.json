@@ -1,7 +1,7 @@
 {
   "name": "eslint-vue-js-fixer",
-  "version": "1.0.6",
-  "description": "",
+  "version": "1.1.1",
+  "description": "eslint vue fixer",
   "main": "lib/eslint-vue-js-fixer.js",
   "scripts": {
     "test": "eslint --ext .js,.vue test",
