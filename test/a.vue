@@ -2,22 +2,22 @@
 <div>
 </div>
 <div>
-    <!--sdflks -->
-    <item name="gaoletian" />
-    <item name="gaoletian" />
-    <item name="gaoletian" />
+  <!--sdflks -->
+  <item name="gaoletian" />
+  <item name="gaoletian" />
+  <item name="gaoletian" />
 
-    <tab-bar>
-        <tab name="one" />
-        <tab name="two" />
-        <tab name="three" />
-    </tab-bar>
+  <tab-bar>
+    <tab name="one" />
+    <tab name="two" />
+    <tab name="three" />
+  </tab-bar>
 
-    <div>
-        <item>
-            <img src="" alt="">
-        </item>
-    </div>
+  <div>
+    <item>
+      <img src="" alt="">
+    </item>
+  </div>
 </div>
 </template>
 
