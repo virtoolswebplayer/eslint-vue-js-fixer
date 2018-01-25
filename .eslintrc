@@ -13,7 +13,7 @@
     "one-var": ["error", "never"],
     "comma-dangle": ["error", { // 结尾逗号 ','
       "arrays": "never",
-      "objects": "always",
+      "objects": "never",
       "imports": "never",
       "exports": "never",
       "functions": "never",
