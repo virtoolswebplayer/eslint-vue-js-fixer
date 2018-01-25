@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const vuefix = require('../lib/eslint-vue-js-fixer')
+const vuefix = require('../lib/eslint-vue-js-fixer');
 const argv = require('yargs')
   .option('d', {
     alias: 'dir',
@@ -26,7 +26,7 @@ const argv = require('yargs')
     alias: 'style',
     demand: false,
     describe: '<style lang="less" rel="stylesheet/less">',
-    default: false,
+    default: '',
     type: 'string',
   })
   .usage('Usage: vuefix [options]')
@@ -39,4 +39,4 @@ const argv = require('yargs')
   .alias('h', 'help')
   .argv;
 
-vuefix(argv.d, argv.e, argv.b, argv.s)
+vuefix(argv.d, argv.e, argv.b, argv.s);

@@ -5,7 +5,8 @@
   "main": "lib/eslint-vue-js-fixer.js",
   "scripts": {
     "test": "eslint --ext .js,.vue test",
-    "fix": "node bin/vuefix.js -d test -e a.js -s less -b"
+    "fix": "node bin/vuefix.js -d test -e a.js -s less -b",
+    "self": "node bin/vuefix.js -d lib"
   },
   "bin": {
     "vuefix": "./bin/vuefix.js"
@@ -14,7 +15,11 @@
     "type": "git",
     "url": "https://github.com/virtoolswebplayer/eslint-vue-js-fixer.git"
   },
-  "keywords": ["eslint", "vue", "fix"],
+  "keywords": [
+    "eslint",
+    "vue",
+    "fix"
+  ],
   "author": "gaoletian@finupgroup.com",
   "license": "ISC",
   "bugs": {
@@ -26,7 +31,10 @@
     "eslint": "^3.15.0",
     "parse5": "^3.0.1",
     "recursive-readdir": "2.1.0",
-    "yargs": "^6.6.0"
+    "vue-formatter": "^0.0.7",
+    "vue-template-compiler": "^2.5.13",
+    "yargs": "^6.6.0",
+    "js-beautify": "^1.7.5"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
